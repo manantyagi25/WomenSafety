@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactsActivity"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/heading1"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/heading"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/heading1TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="30dp"
+        android:text="Your Contacts"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/heading1"
+        app:layout_constraintStart_toEndOf="@+id/heading1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="30dp"
+        android:onClick="sendDistress"
+        android:text="Send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading1TV" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:elevation="30dp"
+        android:onClick="showLocation"
+        android:text="Show"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/heading1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contact1"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@android:color/background_light"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <EditText
+                    android:id="@+id/nameET1"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Contact Name"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <EditText
+                    android:id="@+id/phoneET1"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#00cc44"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/no1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contact2"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@android:color/background_light"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <EditText
+                    android:id="@+id/nameET2"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Contact Name"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <EditText
+                    android:id="@+id/phoneET2"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#00cc44"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/no2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contact3"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@android:color/background_light"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <EditText
+                    android:id="@+id/nameET3"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Contact Name"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <EditText
+                    android:id="@+id/phoneET3"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#00cc44"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/no3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contact4"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@android:color/background_light"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <EditText
+                    android:id="@+id/nameET4"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Contact Name"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <EditText
+                    android:id="@+id/phoneET4"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#00cc44"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/no4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contact5"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@android:color/background_light"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <EditText
+                    android:id="@+id/nameET5"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Contact Name"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <EditText
+                    android:id="@+id/phoneET5"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/edit_text_design"
+                    android:elevation="4dp"
+                    android:ems="10"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:padding="8dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorHint="@android:color/tertiary_text_light"
+                    android:textColorLink="@color/design_default_color_primary" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#00cc44"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/no5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/buttonsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/button_design"
+                    android:elevation="8dp"
+                    android:onClick="cancelAction"
+                    android:text="@android:string/cancel"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/button_design"
+                    android:elevation="8dp"
+                    android:onClick="saveAction"
+                    android:text="Save"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
